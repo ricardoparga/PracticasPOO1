@@ -2,9 +2,9 @@ public class TestPersonaje{
 	public static void main(String[] args) {
 		Personaje alumno = new Personaje("Kal-EL");
 		alumno.saludar();
-		System.out.println("Nombre: " + alumno.getNombre() + "Edad: " alumno.getEdad());
+		System.out.println("Nombre: " + alumno.getNombre() + "Edad: " + alumno.getEdad());
 		System.out.println("Modificando el nombre: " + alumno.getNombre());
-		alumno.setNombre("Michael Jordam");
+		alumno.setNombre("Michael Jordan");
 		alumno.saludar();
 		if (!alumno.setEdad(30)) {
 			System.out.println("Edad sin cambios: ");
