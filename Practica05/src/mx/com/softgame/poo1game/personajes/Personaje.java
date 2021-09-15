@@ -1,3 +1,4 @@
+package mx.com.softgame.poo1game.personajes;
 public class Personaje{
 	private String nombre;
 	private int edad;

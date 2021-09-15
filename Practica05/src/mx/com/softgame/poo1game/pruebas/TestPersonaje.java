@@ -1,3 +1,5 @@
+package mx.com.softgame.poo1game.pruebas;
+import mx.com.softgame.poo1game.personajes.Personaje;
 public class TestPersonaje{
 	public static void main(String[] args) {
 		Personaje alumno = new Personaje("Kal-EL");
