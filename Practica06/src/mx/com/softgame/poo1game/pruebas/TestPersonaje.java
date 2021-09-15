@@ -14,6 +14,16 @@ public class TestPersonaje{
 		System.out.println(per04.getDetalle());
 		System.out.println(per05.getDetalle());
 
+		Personaje per06 = per05;
+		Personaje per07 = per04;
+		Personaje per08 = per03;
+		Personaje per09 = per02;
+		Personaje per10 = per01;
+
+		per06.setNombre("Patrick Alberto Camilo");
+		per08.setNombre("Hanna");
+		per10.setNombre("Jorge Abraham");
+
 		
     }
 }
