@@ -8,7 +8,9 @@ public class Personaje{
 		int edad = 0;
 	}
 	public void setNombre(String nombre){
-		this.nombre=nombre;
+		if (nombre.length()>3 && nombre.length()<20) {
+			this.nombre=nombre;
+		}
 	}
 	public String getNombre(){
 		return nombre;
