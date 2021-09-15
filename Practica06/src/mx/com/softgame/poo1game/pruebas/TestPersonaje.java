@@ -24,6 +24,13 @@ public class TestPersonaje{
 		per08.setNombre("Hanna");
 		per10.setNombre("Jorge Abraham");
 
-		
+		per07.setEdad((int)(Math.random()*1000));
+		per09.setEdad((int)(Math.random()*1000));
+
+		System.out.println(per01.getDetalle());
+		System.out.println(per02.getDetalle());
+		System.out.println(per03.getDetalle());
+		System.out.println(per04.getDetalle());
+		System.out.println(per05.getDetalle());
     }
 }
