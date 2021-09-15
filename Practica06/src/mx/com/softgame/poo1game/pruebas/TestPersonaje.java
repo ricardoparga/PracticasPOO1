@@ -2,11 +2,17 @@ package mx.com.softgame.poo1game.pruebas;
 import mx.com.softgame.poo1game.personajes.Personaje;
 public class TestPersonaje{
 	public static void main(String[] args) {
-		Personaje per01 = new Personaje ("Aline", 20);
-		Personaje per02 = new Personaje ("Valeria", 10);
-		Personaje per03 = new Personaje ("Federico", 1);
-		Personaje per04 = new Personaje ("Mayela", -10);
-		Personaje per05 = new Personaje ("Edwin", 500);
+		Personaje per01 = new Personaje ("Aline");
+		Personaje per02 = new Personaje ("Valeria");
+		Personaje per03 = new Personaje ("Federico");
+		Personaje per04 = new Personaje ("Mayela");
+		Personaje per05 = new Personaje ("Edwin");
+
+		per01.setEdad(20);
+		per02.setEdad(10);
+		per03.setEdad(1);
+		per04.setEdad(-10);
+		per05.setEdad(500);
 
 		System.out.println(per01.getDetalle());
 		System.out.println(per02.getDetalle());
