@@ -5,7 +5,11 @@ public class Personaje{
 
 	public Personaje(String nombre, int poder){
 		this.nombre = nombre;
-		int edad = 0;
+		if (poder>=0 && poder<=500) { //Duda resuelta por compañero de clase
+			this.poder = poder;
+		} else {
+			this.poder = 0;
+		}
 	}
 
 	public void setPoder(int poder){
@@ -16,5 +20,5 @@ public class Personaje{
 		return nombre + "\t" + poder;
 	}
 
-	
+
 }

@@ -6,11 +6,15 @@ public class Escena{
 		Personaje sasuke = new Personaje ("Sasuke", -10);
 		Personaje sakura = new Personaje ("Sakura", 300);
 
-		System.out.println(naruto.getDetalle());
-		System.out.println(sasuke.getDetalle());
-		System.out.println(sakura.getDetalle());
+		Personaje usumaki = naruto;
+
+		System.out.println(naruto.getDatos());
+		System.out.println(sasuke.getDatos());
+		System.out.println(sakura.getDatos());
+		System.out.println("_ _ _");
+		System.out.println(usumaki.getDatos());
 		System.out.println("_ _ _");
 
-		
+
 	}
 }
