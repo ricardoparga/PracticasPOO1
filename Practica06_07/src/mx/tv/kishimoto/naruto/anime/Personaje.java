@@ -13,7 +13,16 @@ public class Personaje{
 	}
 
 	public void setPoder(int poder){
-
+		int suma = this.poder + poder; //Duda resuelta por el profe
+		if (suma>=500) {
+			this.poder = 500;
+		} else {
+			if (suma<=0) {
+				this.poder = 0;
+			} else {
+				this.poder = suma;
+			}
+		}
 	}
 
 	public String getDatos(){
