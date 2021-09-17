@@ -1,8 +1,8 @@
 package mx.tv.kishimoto.naruto.anime;
+import java.util.Random;
 public class Personaje{
 	private String nombre;
 	private int poder;
-
 	public Personaje(String nombre, int poder){
 		this.nombre = nombre;
 		if (poder>=0 && poder<=500) { //Duda resuelta por compañero de clase
@@ -28,6 +28,4 @@ public class Personaje{
 	public String getDatos(){
 		return nombre + "\t" + poder;
 	}
-
-
 }
