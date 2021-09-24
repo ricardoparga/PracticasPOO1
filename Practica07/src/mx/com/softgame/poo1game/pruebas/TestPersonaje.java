@@ -8,5 +8,12 @@ public class TestPersonaje{
 		Personaje per04 = new Personaje ("Valeria");
 
 		
+		int n = 0;
+		int m = 0;
+		while (n >= m){
+			n = (int)(Math.random()*100);
+			m = (int)(Math.random()*100);
+		}
+		
     }
 }
