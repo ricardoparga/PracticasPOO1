@@ -7,15 +7,17 @@ public class TestPersonaje{
 		Personaje per03 = new Personaje ("Christian");
 		Personaje per04 = new Personaje ("Valeria");
 
-		ed = (int)(Math.random()*250);
+		int ed;
 		int n = 0;
 		int m = 0;
 		while (n >= m){
 			n = (int)(Math.random()*100);
 			m = (int)(Math.random()*100);
 		}
+		int i;
 		outfor:
 		for (i=n; i<=m; i++) {
+			ed = (int)(Math.random()*250);
 			if (per01.setEdad(ed)) {
 				System.out.println(per01.getDetalle() + "se modifico la edad");
 			}
@@ -35,13 +37,14 @@ public class TestPersonaje{
 				System.out.println(per03.getDetalle() + "sin modificacion de edad a: " + ed);
 			}
 			do{
+				ed = (int)(Math.random()*250);
 				System.out.println(ed);
 				if (ed == 150) {
 					System.out.println("***Bingo 150***");
 					continue outfor;
 				}
 			}
-			while (!per04.setEdad(ed))
+			while (!per04.setEdad(ed));
 			System.out.println(per04.getDetalle());
 		}
     }
