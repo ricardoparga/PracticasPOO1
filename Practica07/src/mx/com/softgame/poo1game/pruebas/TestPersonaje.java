@@ -42,8 +42,8 @@ public class TestPersonaje{
 				}
 			}
 			while (!per04.setEdad(ed)){
-				System.out.println(per04.getDetalle());
 			}
+			System.out.println(per04.getDetalle());
 		}
     }
 }
