@@ -19,23 +19,26 @@ public class TestPersonaje{
 		for (i=n; i<=m; i++) {
 			ed = (int)(Math.random()*250);
 			if (per01.setEdad(ed)) {
-				System.out.println(per01.getDetalle() + "se modifico la edad");
+				System.out.println(per01.getDetalle() + ", se modifico la edad ");
 			}
 			else {
-				System.out.println(per01.getDetalle() + "sin modificacion de edad a: " + ed);
+				System.out.println(per01.getDetalle() + ", sin modificacion de edad a: " + ed);
 			}
+			ed = (int)(Math.random()*250);
 			if (per02.setEdad(ed)) {
-				System.out.println(per02.getDetalle() + "se modifico la edad");
+				System.out.println(per02.getDetalle() + ", se modifico la edad ");
 			}
 			else {
-				System.out.println(per02.getDetalle() + "sin modificacion de edad a: " + ed);
+				System.out.println(per02.getDetalle() + ", sin modificacion de edad a: " + ed);
 			}
+			ed = (int)(Math.random()*250);
 			if (per03.setEdad(ed)) {
-				System.out.println(per03.getDetalle() + "se modifico la edad");
+				System.out.println(per03.getDetalle() + ", se modifico la edad ");
 			}
 			else {
-				System.out.println(per03.getDetalle() + "sin modificacion de edad a: " + ed);
+				System.out.println(per03.getDetalle() + ", sin modificacion de edad a: " + ed);
 			}
+			ed = (int)(Math.random()*250);
 			do{
 				ed = (int)(Math.random()*250);
 				System.out.println(ed);
