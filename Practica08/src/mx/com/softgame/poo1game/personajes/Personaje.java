@@ -17,9 +17,9 @@ public class Personaje{
 	public void decVida(int restaVida){
 		if ((vida-restaVida>0)) {
 			vida = vida-restaVida;
-		}
-	}//Termino 8:25
-
+		} //Termino 8:25
+	}
+	
 	public void setNombre(String nombre){
 		if (nombre.length()>3 && nombre.length()<20) {
 			this.nombre=nombre;
