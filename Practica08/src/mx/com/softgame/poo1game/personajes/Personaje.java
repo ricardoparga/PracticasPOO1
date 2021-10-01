@@ -3,10 +3,23 @@ public class Personaje{
 	private String nombre;
 	private int vida;
 
+	public Personaje(String nombre, int vida){
+		this.nombre = nombre;
+		this.vida = vida;
+	}
 	public Personaje(String nombre){
 		this.nombre = nombre;
-		this.vida = vida; //Poner edad en 0
+		int vida = 3;
 	}
+	public void decVida(){
+		decVida(1);
+	}
+	public void decVida(int restaVida){
+		if ((vida-restaVida>0)) {
+			vida = vida-restaVida;
+		}
+	}//Termino 8:25
+
 	public void setNombre(String nombre){
 		if (nombre.length()>3 && nombre.length()<20) {
 			this.nombre=nombre;
