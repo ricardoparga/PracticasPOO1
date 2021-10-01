@@ -1,5 +1,5 @@
 package mx.com.softgame.poo1game.pruebas;
-import mx.com.softgame.poo1game.personajes.Personaje
+import mx.com.softgame.poo1game.personajes.Personaje;
 import mx.com.softgame.poo1game.personajes.buenos.Planta;
 import mx.com.softgame.poo1game.personajes.malos.Zombie;
 
@@ -15,7 +15,8 @@ public class TestHerencia{
 		Zombie zom02 = new Zombie ("Mayela", true);
 		Zombie zom03 = new Zombie ("Carlos");
 
-		Personaje [] personajes {per01, per02, plan01, plan02, plan03, plan04, zom01, zom02, zom03};
+		Personaje [] personajes = {per01,per02,plan01,plan02,plan03,plan04,zom01,zom02,zom03};
+
 		for (Personaje i: personajes) {
 			System.out.println(i.getDetalle());
 			if (i instanceof Planta) {
