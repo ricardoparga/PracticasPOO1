@@ -15,6 +15,6 @@ public class TestHerencia{
 		Zombie zom02 = new Zombie ("Mayela", true);
 		Zombie zom03 = new Zombie ("Carlos");
 
-		
+		Personaje [] personajes {per01, per02, plan01, plan02, plan03, plan04, zom01, zom02, zom03};
 	}
 }
