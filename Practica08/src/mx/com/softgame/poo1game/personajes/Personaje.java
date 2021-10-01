@@ -1,10 +1,11 @@
 package mx.com.softgame.poo1game.personajes;
 public class Personaje{
 	private String nombre;
-	private int edad;
+	private int vida;
 
 	public Personaje(String nombre){
-		this.nombre = nombre; //Poner edad en 0
+		this.nombre = nombre;
+		this.vida = vida; //Poner edad en 0
 	}
 	public void setNombre(String nombre){
 		if (nombre.length()>3 && nombre.length()<20) {
@@ -17,12 +18,12 @@ public class Personaje{
 	public void saludar(){
 		System.out.println("Hola alumno de POO " + nombre);
 	}
-	public int getEdad(){
-		return edad;
+	public int getVida(){
+		return vida;
 	}
-	public boolean setEdad(int edad){
-		if (edad>0 && edad<120) {
-			this.edad = edad;
+	public boolean setVida(int vida){
+		if (edad>0 && edad<100) {
+			this.vida = vida;
 			return true;
 		}
 		else {
