@@ -14,7 +14,20 @@ public class Zombie extends Personaje{
 	public Zombie(String nombre){
 		this(nombre, 3, false);
 	}
-	
+	public void decVida(){
+		if (ataque == false) {
+			super.decVida(3);
+		} else {
+			super.decVida(2);
+		}
+	}
+	public void decVida(int restaVida){
+		if (ataque == false) {
+			super.decVida(restaVida*3);
+		} else {
+			super.decVida(restaVida*2);
+		}
+	}	
 
 	public boolean getAtaque(){
 		return ataque;
