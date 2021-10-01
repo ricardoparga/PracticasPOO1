@@ -16,5 +16,20 @@ public class TestHerencia{
 		Zombie zom03 = new Zombie ("Carlos");
 
 		Personaje [] personajes {per01, per02, plan01, plan02, plan03, plan04, zom01, zom02, zom03};
+		for (Personaje i: personajes) {
+			System.out.println(i.getDetalle());
+			if (i instanceof Planta) {
+				Planta p = (Planta)i;
+				System.out.println("Soy una planta" + p.getEscudo());
+			}
+			if (i instanceof Zombie) {
+				Zombie z = (Zombie)i;
+				System.out.println("Soy Zombie" + z.getAtaque());
+			}
+			int a = (int)(Math.random()*10);
+			i.decVida(a);
+			System.out.println(a);
+			System.out.println(i.getDetalle());
+		}
 	}
 }
