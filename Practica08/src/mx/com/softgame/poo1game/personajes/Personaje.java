@@ -19,7 +19,7 @@ public class Personaje{
 			vida = vida-restaVida;
 		} //Termino 8:25
 	}
-	
+
 	public void setNombre(String nombre){
 		if (nombre.length()>3 && nombre.length()<20) {
 			this.nombre=nombre;
@@ -35,7 +35,7 @@ public class Personaje{
 		return vida;
 	}
 	public boolean setVida(int vida){
-		if (edad>0 && edad<100) {
+		if (vida>0 && vida<100) {
 			this.vida = vida;
 			return true;
 		}
@@ -44,6 +44,6 @@ public class Personaje{
 		}
 	}
 	public String getDetalle(){
-		return nombre + "\t" + edad;
+		return nombre + "\t" + vida;
 	}
 }
