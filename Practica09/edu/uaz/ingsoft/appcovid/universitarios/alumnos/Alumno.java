@@ -1,5 +1,6 @@
 package edu.uaz.ingsoft.appcovid.universitarios.alumnos;
 import edu.uaz.ingsoft.appcovid.universitarios.Universitario;
+
 public class Alumno extends Universitario{
 	int calificacion;
 
