@@ -10,7 +10,7 @@ public class Maestro extends Universitario{
 		if (sueldo>100 && sueldo<20000) {
 			System.out.println(sueldo);
 		} else {
-			sueldo = 1000.00f
+			sueldo = 1000.00f;
 			System.out.println(sueldo);
 		}
 	}

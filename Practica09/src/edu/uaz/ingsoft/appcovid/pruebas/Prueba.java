@@ -13,17 +13,17 @@ public class Prueba{
 			new Maestro("Federico", 1000f),
 			new Alumno("Hanna", 5)
 		};
-
+		int i = 0;
 		while (i<personas.length){
-			Personaje pp = personajes[i];
-			for (Personaje p : personajes) {
-				if (pp == p) {
-					System.out.println("*****" + pp + " es identico a " + p + " son el mismo objeto" + "*****");
+			Universitario uu = personas[i];
+			for (Universitario u : personas) {
+				if (uu == u) {
+					System.out.println("*****" + uu + " es identico a " + u + " son el mismo objeto" + "*****");
 				} else {
-					if (pp.equals(p)) {
-						System.out.println("**" + pp + " es igual a " + p + " son diferentes objetos" + "**");
+					if (uu.equals(u)) {
+						System.out.println("**" + uu + " es igual a " + u + " son diferentes objetos" + "**");
 					} else {
-						System.out.println(pp + "!=" + p);
+						System.out.println(uu + "!=" + u);
 					}
 				}
 			}
