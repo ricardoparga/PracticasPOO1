@@ -4,12 +4,12 @@ public class Tablero{
 	static final int MAX_LINE = 5;
 	private static int poss = -1;
 	private int idx;
-	private Universitario [] personas = new Universitario {MAX_LINE};
+	private static Universitario [] personas = new Universitario [MAX_LINE];
 
 	private Tablero(){
 	}
 
-	private static void mostrar(){
+	public static void mostrar(){
 		System.out.println("*El tablero contiene: *");
 		for (Universitario u : personas) {
 			System.out.println(u);
@@ -19,27 +19,27 @@ public class Tablero{
 		}
 		System.out.println("******");
 	}
-	private static void insertar(Universitario u){
+	public static void insertar(Universitario u){
 		if ((poss+1 >= 0) && (poss <= MAX_LINE)) {
-			u = personas[poss+1];
+			personas[poss+1] = u;
 			poss++;
 		} else {
 			System.out.println("Imposible insertar en: " + poss);
 		}
 	}
-	private static void insertar(Universitario u, int idx){
+	public static void insertar(Universitario u, int idx){
 		if ((idx >= 0) && (idx <= MAX_LINE)) {
-			u = personas[idx];
+			personas[idx] = u;
 		} else {
 			System.out.println("Imposible insertar en: " + idx);
 		}
 	}
 
-	private static void borrar(){
+	public static void borrar(){
 		personas[poss] = null;
 		poss--;
 	}
-	private static void borrar(int idx){
+	public static void borrar(int idx){
 		personas[idx] = null;
 	}
 }
