@@ -34,5 +34,12 @@ public class Tablero{
 			System.out.println("Error");
 		}
 	}
-	
+
+	private static void borrar(){
+		personas[poss] = null;
+		poss--;
+	}
+	private static void borrar(int idx){
+		personas[idx] = null;
+	}
 }
