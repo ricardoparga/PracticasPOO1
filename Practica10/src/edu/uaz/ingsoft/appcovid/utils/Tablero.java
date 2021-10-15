@@ -24,14 +24,14 @@ public class Tablero{
 			u = personas[poss+1];
 			poss++;
 		} else {
-			System.out.println("Error");
+			System.out.println("Imposible insertar en: " + poss);
 		}
 	}
 	private static void insertar(Universitario u, int idx){
 		if ((idx >= 0) && (idx <= MAX_LINE)) {
 			u = personas[idx];
 		} else {
-			System.out.println("Error");
+			System.out.println("Imposible insertar en: " + idx);
 		}
 	}
 
