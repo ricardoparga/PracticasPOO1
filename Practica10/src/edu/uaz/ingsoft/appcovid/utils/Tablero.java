@@ -3,7 +3,7 @@ import edu.uaz.ingsoft.appcovid.universitarios.Universitario;
 public class Tablero{
 	static final int MAX_LINE = 5;
 	private static int poss = -1;
-	private int idx;
+	//private int idx;
 	private static Universitario [] personas = new Universitario [MAX_LINE];
 
 	private Tablero(){
@@ -20,7 +20,7 @@ public class Tablero{
 		System.out.println("******");
 	}
 	public static void insertar(Universitario u){
-		if ((poss+1 >= 0) && (poss <= MAX_LINE)) {
+		if ((poss+1 >= 0) && (poss < MAX_LINE)) {
 			personas[poss+1] = u;
 			poss++;
 		} else {
@@ -28,7 +28,7 @@ public class Tablero{
 		}
 	}
 	public static void insertar(Universitario u, int idx){
-		if ((idx >= 0) && (idx <= MAX_LINE)) {
+		if ((idx >= 0) && (idx < MAX_LINE)) {
 			personas[idx] = u;
 		} else {
 			System.out.println("Imposible insertar en: " + idx);
@@ -36,10 +36,18 @@ public class Tablero{
 	}
 
 	public static void borrar(){
-		personas[poss] = null;
-		poss--;
+		if ((poss >= 0) && (poss < MAX_LINE)) {
+			personas[poss] = null;
+			poss--;
+		} else {
+			System.out.println("Imposible borrar en: " + poss);
+		}
 	}
 	public static void borrar(int idx){
-		personas[idx] = null;
+		if ((idx-1 >= 0) && (idx-1 < MAX_LINE)) {
+			personas[idx] = null;
+		} else {
+			System.out.println("Imposible borrar en: " + idx);
+		}
 	}
 }
