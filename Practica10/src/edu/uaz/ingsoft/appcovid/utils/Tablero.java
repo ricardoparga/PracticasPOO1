@@ -3,7 +3,6 @@ import edu.uaz.ingsoft.appcovid.universitarios.Universitario;
 public class Tablero{
 	static final int MAX_LINE = 5;
 	private static int poss = -1;
-	//private int idx;
 	private static Universitario [] personas = new Universitario [MAX_LINE];
 
 	private Tablero(){
