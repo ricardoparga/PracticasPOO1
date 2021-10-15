@@ -30,6 +30,6 @@ public class Alumno extends Universitario{
 	}
 
 	public String toString(){
-		return super.toString() + calificacion;
+		return ("Alumno: " + super.toString() + calificacion);
 	}
 }
