@@ -5,6 +5,23 @@ public class Alumno extends Universitario{
 	public int Calificacion[] calificaciones = new Calificacion[4];
 	private float promedio = 0.0f;
 
+	public Alumno(String nombre){
+		this(nombre);
+		promedio = (Calificacion[0] + Calificacion[1] + Calificacion[2]
+					Calificacion[3] + Calificacion[4]);
+	}
+	public void setCalificacion(){
+		for (int i = 0; i<calificacion.length; i++) {
+			calificacion[i] = Calificacion.CERO;
+		}
+	}
+	public void setCalificacion(Calificacion c, int indice){
+		calificacion[indice] = c;
+	}
+	public float getPromedio(){
+
+	}
+
 	public Alumno(String nombre, int calificacion){
 		super(nombre);
 		this.calificacion = calificacion;
@@ -14,9 +31,6 @@ public class Alumno extends Universitario{
 			calificacion = 5;
 			System.out.println(calificacion);
 		}
-	}
-	public Alumno(String nombre){
-		this(nombre);
 	}
 
 	public boolean equals(Object o){
@@ -32,5 +46,9 @@ public class Alumno extends Universitario{
 
 	public String toString(){
 		return ("Alumno: " + super.toString() + calificacion);
+	}
+
+	public void setPromedio(){
+
 	}
 }
