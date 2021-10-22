@@ -19,7 +19,10 @@ public class Alumno extends Universitario{
 		calificacion[indice] = c;
 	}
 	public float getPromedio(){
-
+		for (int i = 0; i<calificacion.length; i++) {
+			promedio = calificacion[i].getCalif();
+		}
+		return promedio;
 	}
 
 	public Alumno(String nombre, int calificacion){
@@ -45,10 +48,6 @@ public class Alumno extends Universitario{
 	}
 
 	public String toString(){
-		return ("Alumno: " + super.toString() + calificacion);
-	}
-
-	public void setPromedio(){
-
+		return ("Alumno: " + super.toString() + calificacion + promedio);
 	}
 }

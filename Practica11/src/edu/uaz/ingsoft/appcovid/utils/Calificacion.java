@@ -1,6 +1,5 @@
 package edu.uaz.ingsoft.appcovid.utils;
 public enum Calificacion{
-	public int calif = 0;
 	UNO(1),
 	DOS(2),
 	TRES(3),
@@ -11,11 +10,12 @@ public enum Calificacion{
 	OCHO(8),
 	NUEVE(9),
 	DIEZ(10);
+	public int calif = 0;
 
-	public Calificacion(int calif){
+	private Calificacion(int calif){
 		this.calif = calif;
 	}
-	public getCalif(){
+	public int getCalif(){
 		return calif;
 	}
 }
