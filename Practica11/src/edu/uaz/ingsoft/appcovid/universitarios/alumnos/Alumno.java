@@ -16,7 +16,7 @@ public class Alumno extends Universitario{
 		}
 	}
 	public Alumno(String nombre){
-		this(nombre, 5);
+		this(nombre);
 	}
 
 	public boolean equals(Object o){
