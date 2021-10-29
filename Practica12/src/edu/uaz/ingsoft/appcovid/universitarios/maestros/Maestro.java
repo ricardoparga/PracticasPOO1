@@ -1,7 +1,7 @@
 package edu.uaz.ingsoft.appcovid.universitarios.maestros;
 import edu.uaz.ingsoft.appcovid.universitarios.Universitario;
 
-public class Maestro extends Universitario{
+public class Maestro extends Universitario implements Tutorias{
 	private float sueldo;
 
 	public Maestro(String nombre, float sueldo){
@@ -15,6 +15,13 @@ public class Maestro extends Universitario{
 
 	public Maestro(String nombre){
 		this(nombre, 1000.00f);
+	}
+
+	public void realizarTutoria(){
+		System.out.println("Imparte tutoria");
+	}
+	public void getNota(){
+		System.out.println("El docente imparte las notas a los alumnos.");
 	}
 
 	public boolean equals(Object o){
