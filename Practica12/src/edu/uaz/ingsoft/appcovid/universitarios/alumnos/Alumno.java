@@ -1,18 +1,23 @@
 package edu.uaz.ingsoft.appcovid.universitarios.alumnos;
 import edu.uaz.ingsoft.appcovid.universitarios.Universitario;
 import edu.uaz.ingsoft.appcovid.utils.Calificacion;
-public class Alumno extends Universitario{
+public class Alumno extends Universitario implements Tutorias{
 	private float promedio;
 	private Calificacion[] calificacion = new Calificacion[5];
 
-	//Constructores
 	public Alumno(String nombre){
 		super(nombre);
 		setCalificacion();
 		getPromedio();
 	}
 
-	//Metodos
+	public void realizarTutoria(){
+		for (i=0; i<calificacion.length; i++) {
+			mostrar = calificacion[i].getCalif();
+		}
+		System.out.println("Recibe tutorias: " + mostrar);
+	}
+
 	public boolean equals(Object o){
 		boolean result = false;
 		if ((o != null) && (o instanceof Alumno)){
@@ -35,7 +40,6 @@ public class Alumno extends Universitario{
 		for (int i = 0; i <  calificacion.length; i++){
 			cadena = cadena + calificacion[i].getCalif();
 		}
-
 		return ("Alumno " + super.toString() + " con las calificaciones \t" + cadena + "\t obtuvo el promedio\t" + promedio);
 	}
 
@@ -48,6 +52,7 @@ public class Alumno extends Universitario{
 			calificacion[i] = Calificacion.CERO;
 		}
 	}
+
 	int suma = 0;
 	public void setCalificacion(Calificacion c, int indice){
 		calificacion[indice] = c;
