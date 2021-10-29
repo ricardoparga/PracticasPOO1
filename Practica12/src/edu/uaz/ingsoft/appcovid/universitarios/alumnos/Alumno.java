@@ -31,6 +31,7 @@ public class Alumno extends Universitario implements Tutorias{
 		for (i=0; i<calificacion.length; i++) {
 			Calificacion cal = getRandom();
 			setCalificacion(cal, i);
+		}
 	}
 
 	public boolean equals(Object o){

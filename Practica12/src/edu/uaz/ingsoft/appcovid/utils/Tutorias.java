@@ -1,8 +1,5 @@
 package edu.uaz.ingsoft.appcovid.utils;
-public class Tutorias{
+public interface Tutorias{
 
-	public void realizarTutoria(){
-
-	}
-	
+	public void realizarTutoria();
 }
