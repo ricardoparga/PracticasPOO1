@@ -1,6 +1,6 @@
 package edu.uaz.ingsoft.appcovid.universitarios.maestros;
 import edu.uaz.ingsoft.appcovid.universitarios.Universitario;
-
+import edu.uaz.ingsoft.appcovid.utils.Tutorias;
 public class Maestro extends Universitario implements Tutorias{
 	private float sueldo;
 
