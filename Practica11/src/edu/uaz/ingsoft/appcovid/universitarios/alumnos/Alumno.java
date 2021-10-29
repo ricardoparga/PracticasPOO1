@@ -1,53 +1,66 @@
 package edu.uaz.ingsoft.appcovid.universitarios.alumnos;
 import edu.uaz.ingsoft.appcovid.universitarios.Universitario;
-
+import edu.uaz.ingsoft.appcovid.utils.Calificacion;
 public class Alumno extends Universitario{
-	public int Calificacion[] calificaciones = new Calificacion[4];
-	private float promedio = 0.0f;
+	private float promedio;
+	private Calificacion[] calificacion = new Calificacion[5];
 
+	//Constructores
 	public Alumno(String nombre){
-		this(nombre);
-		promedio = (Calificacion[0] + Calificacion[1] + Calificacion[2]
-					Calificacion[3] + Calificacion[4]);
-	}
-	public void setCalificacion(){
-		for (int i = 0; i<calificacion.length; i++) {
-			calificacion[i] = Calificacion.CERO;
-		}
-	}
-	public void setCalificacion(Calificacion c, int indice){
-		calificacion[indice] = c;
-	}
-	public float getPromedio(){
-		for (int i = 0; i<calificacion.length; i++) {
-			promedio = calificacion[i].getCalif();
-		}
-		return promedio;
-	}
-
-	public Alumno(String nombre, int calificacion){
 		super(nombre);
-		this.calificacion = calificacion;
-		if (calificacion>0 && calificacion<10) {
-			System.out.println(calificacion);
-		} else {
-			calificacion = 5;
-			System.out.println(calificacion);
-		}
+		setCalificacion();
+		getPromedio();
 	}
 
+	//Metodos
 	public boolean equals(Object o){
-        boolean iguales = false;
-        if (o != null && o instanceof Alumno) {
-        	Alumno a = (Alumno) o;
-        	if (nombre == a.nombre && calificacion == a.calificacion) {
-        		iguales = true;
-        	}
-        }
-        return iguales;
+		boolean result = false;
+		if ((o != null) && (o instanceof Alumno)){
+			Alumno m = (Alumno) o;
+			if ( (this.getNombre().equals(m.getNombre())) && (this.promedio == m.promedio)){
+				result = true;
+			}
+		}
+		return result;
+	}
+
+	public int hashCode(){
+		int calif = (int) (promedio);
+		return super.hashCode()*calif;
 	}
 
 	public String toString(){
-		return ("Alumno: " + super.toString() + calificacion + promedio);
+		String cadena = " ";
+
+		for (int i = 0; i <  calificacion.length; i++){
+			cadena = cadena + calificacion[i].getCalif();
+		}
+
+		return ("Alumno " + super.toString() + " con las calificaciones \t" + cadena + "\t obtuvo el promedio\t" + promedio);
+	}
+
+	public String getNombre(){
+		return super.getNombre();
+	}
+
+	public void setCalificacion(){
+		for (int i = 0; i <  calificacion.length; i++) {
+			calificacion[i] = Calificacion.CERO;
+		}
+	}
+	int suma = 0;
+	public void setCalificacion(Calificacion c, int indice){
+		calificacion[indice] = c;
+		getPromedio();
+	}
+
+	public float getPromedio(){
+		for (int i = 0 ; i < calificacion.length ; i++ ) {
+			suma = suma + calificacion[i].getCalif();
+		}
+		promedio = suma/calificacion.length;
+		return promedio;
 	}
 }
+
+
