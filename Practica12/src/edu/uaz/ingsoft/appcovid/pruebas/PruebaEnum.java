@@ -4,7 +4,7 @@ import edu.uaz.ingsoft.appcovid.utils.Calificacion;
 
 public class PruebaEnum{
 	public static void main(String[] args) {
-		Alumno a = new Alumno("Sebastian");
+		Alumno a = new Alumno("Ricardo");
 		
 		for (int i = 0; i < 5 ; i++ ) {
 			System.out.println(a.toString());

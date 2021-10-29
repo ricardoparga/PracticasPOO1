@@ -17,6 +17,13 @@ public class Alumno extends Universitario implements Tutorias{
 		}
 		System.out.println("Recibe tutorias: " + mostrar);
 	}
+	public void getNota(){
+		System.out.println("Calificaciones actuales: " + calificacion + "Promedio actual: " + getPromedio());
+	}
+	public void llenarCalificaciones(){
+		rnd = (int)(Math.random()*11);
+		calificacion = rnd;
+	}
 
 	public boolean equals(Object o){
 		boolean result = false;
