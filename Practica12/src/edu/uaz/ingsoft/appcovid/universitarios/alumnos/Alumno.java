@@ -4,7 +4,7 @@ import edu.uaz.ingsoft.appcovid.utils.Calificacion;
 import edu.uaz.ingsoft.appcovid.utils.Tutorias;
 public class Alumno extends Universitario implements Tutorias{
 	private float promedio;
-	private Calificacion[] calificacion = new Calificacion[5];
+	Calificacion[] calificacion = new Calificacion[5];
 	public int i = 0;
 
 	public Alumno(String nombre){
@@ -55,8 +55,8 @@ public class Alumno extends Universitario implements Tutorias{
 	
 	public void llenarCalificaciones(){
 		for (i=0; i<calificacion.length; i++) {
-			Calificacion cal = getCalifAleatoria();
-			setCalificacion(cal, i);
+			Calificacion c = getCalifAleatoria();
+			setCalificacion(c, i);
 		}
 	}
 
@@ -95,13 +95,13 @@ public class Alumno extends Universitario implements Tutorias{
 		}
 	}
 
-	int suma = 0;
 	public void setCalificacion(Calificacion c, int indice){
 		calificacion[indice] = c;
 		getPromedio();
 	}
 
 	public float getPromedio(){
+		int suma = 0;
 		for (int i = 0 ; i < calificacion.length ; i++ ) {
 			suma = suma + calificacion[i].getCalif();
 		}
