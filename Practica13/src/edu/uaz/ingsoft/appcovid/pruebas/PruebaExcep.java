@@ -39,6 +39,12 @@ public class PruebaExcep{
                 } catch (TableroException e) {
                     System.out.println(e + " " + e.getIndex());
                   }
+        } else {
+        	try {
+        		Tablero.borrar(rand);
+        	} catch (TableroException e){
+        		System.out.println(e + " " + e.getIndex());
+        	}
         }
 	}
 }
