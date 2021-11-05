@@ -14,22 +14,48 @@ public class Alumno extends Universitario implements Tutorias{
 	}
 
 	public void realizarTutoria(){
-		int mostrar = 0;
+		String mostrar = " ";
 		for (i=0; i<calificacion.length; i++) {
-			mostrar = calificacion[i].getCalif();
+			mostrar = mostrar + calificacion[i].getCalif();
 		}
 		System.out.println("Recibe tutorias: " + mostrar);
 	}
+
 	public void getNota(){
-		System.out.println("Calificaciones actuales: " + calificacion + "Promedio actual: " + getPromedio());
+		String mostrar = " ";
+		for (i=0; i<calificacion.length; i++) {
+			mostrar = mostrar + calificacion[i].getCalif();
+		}
+		System.out.println("Calificaciones actuales: " + mostrar + "Promedio actual: " + getPromedio());
 	}
-	public Calificacion getRandom(){
-		int rnd = 0;
-		rnd = (int)(Math.random()*10);
-	}
+
+	private static Calificacion getCalifAleatoria() {
+        int rand = (int) (Math.random()*10);
+        switch (rand) {
+            case 1:
+                return Calificacion.UNO;
+            case 2:
+                return Calificacion.DOS;
+            case 3:
+                return Calificacion.TRES;
+            case 4:
+                return Calificacion.CUATRO;
+            case 5:
+                return Calificacion.CINCO;
+            case 6:
+                return Calificacion.SEIS;
+            case 7:
+                return Calificacion.OCHO;
+            case 8:
+                return Calificacion.NUEVE;
+            default:
+                return Calificacion.CERO;
+        }
+    }
+	
 	public void llenarCalificaciones(){
 		for (i=0; i<calificacion.length; i++) {
-			Calificacion cal = getRandom();
+			Calificacion cal = getCalifAleatoria();
 			setCalificacion(cal, i);
 		}
 	}

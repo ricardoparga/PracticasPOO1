@@ -28,7 +28,6 @@ public abstract class Universitario{
 		return nombre;
 	}
 
-	public void getNota(){
-
-	}
+	public abstract void getNota();
+	
 }
