@@ -1,5 +1,6 @@
 package edu.uaz.ingsoft.appcovid.utils;
 import edu.uaz.ingsoft.appcovid.universitarios.Universitario;
+import edu.uaz.ingsoft.appcovid.utils.TableroException;
 public class Tablero{
 	private static final int MAX = 5;
 	private static int pos = -1;
@@ -57,10 +58,8 @@ public class Tablero{
 		 }
 	}
 
-	public static getPersonas(){
-		for (Universitario personas : universitarios) {
-			System.out.println(personas);
-		}
+	public static Universitario[] getPersonas(){
+		return personas;
 	}
 
 }

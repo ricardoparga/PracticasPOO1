@@ -17,6 +17,19 @@ public class PruebaExcep{
 			System.out.println(e);
 		}
 		Tablero.mostrar();
-		
+
+		Universitario[] personas = Tablero.getPersonas();
+        for (Universitario q : personas) {
+            if (q instanceof Alumno) {
+                ((Alumno)q).llenarCalificaciones();
+            }
+        }
+        Tablero.mostrar();
+
+        Maestro u1 = new Maestro("Patrick", 100f);
+        Alumno u2 = new Alumno("Sarahi");
+        u2.llenarCalificaciones();
+
+        
 	}
 }
