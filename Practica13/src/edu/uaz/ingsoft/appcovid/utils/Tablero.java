@@ -57,9 +57,9 @@ public class Tablero{
 		 }
 	}
 
-	public void getPersonas(){
-		for (Universitario universitario : universitarios) {
-			System.out.println(universitario);
+	public static getPersonas(){
+		for (Universitario personas : universitarios) {
+			System.out.println(personas);
 		}
 	}
 
