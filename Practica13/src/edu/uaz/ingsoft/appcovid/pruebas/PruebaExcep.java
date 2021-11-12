@@ -34,17 +34,19 @@ public class PruebaExcep{
         	int rand = (int) (Math.random()*20);
         	if (i % 2 == 0) {
                 try {
-                    Tablero.insertar(u1, rand);
-                    Tablero.insertar(u2,rand+1); 
+                   	Tablero.insertar(u1, rand);
+                    Tablero.insertar(u2,rand+1);
                 } catch (TableroException e) {
                     System.out.println(e + " " + e.getIndex());
-                  }
-        } else {
-        	try {
-        		Tablero.borrar(rand);
-        	} catch (TableroException e){
-        		System.out.println(e + " " + e.getIndex());
-        	}
-        }
+                } else {
+        			try {
+        				Tablero.borrar(rand);
+        			} 	catch (TableroException e){
+        				System.out.println(e + " " + e.getIndex());
+        			}
+        		}
+			}
+		}
+		Tablero.mostrar();
 	}
 }
