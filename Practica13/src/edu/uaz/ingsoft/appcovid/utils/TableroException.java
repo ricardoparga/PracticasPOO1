@@ -3,7 +3,7 @@ public class TableroException extends Exception{
 	int index = 0;
 
 	public TableroException(String msg, int index){
-		this.msg = msg;
+		super(msg);
 		this.index = index;
 	}
 

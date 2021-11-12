@@ -28,7 +28,7 @@ public class Tablero{
 			personas[pos+1] = u;
 			pos++;
 		} else {
-			throw new TableroException("Imposible insertar en: " + (pos+1) );
+			throw new TableroException("Imposible insertar en: " , (pos+1) );
 		}
 	}
 
@@ -36,7 +36,7 @@ public class Tablero{
 		if ((idx > -1) && (idx < MAX) && (personas[idx] == null)){
 			personas[idx] = u;
 		} else {
-			throw new TableroException("Imposible insertar en: " + idx );
+			throw new TableroException("Imposible insertar en: " , idx );
 		}
 	}
 
@@ -46,7 +46,7 @@ public class Tablero{
 		 	personas[pos] = null;
 			pos--;
 		 } else {
-		 	throw new TableroException("Imposible borrar en: " + pos);
+		 	throw new TableroException("Imposible borrar en: " , pos);
 		 }
 	}
 
@@ -54,7 +54,7 @@ public class Tablero{
 		if ((idx > -1 ) && (idx < MAX)){
 		 	personas[idx] = null;
 		 } else {
-		 	throw new TableroException("Imposible borrar en: " + idx);
+		 	throw new TableroException("Imposible borrar en: " , idx);
 		 }
 	}
 

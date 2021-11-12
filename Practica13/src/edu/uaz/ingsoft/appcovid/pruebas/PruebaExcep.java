@@ -4,7 +4,8 @@ import edu.uaz.ingsoft.appcovid.universitarios.alumnos.Alumno;
 import edu.uaz.ingsoft.appcovid.universitarios.maestros.Maestro;
 import edu.uaz.ingsoft.appcovid.utils.Tablero;
 import edu.uaz.ingsoft.appcovid.utils.TableroException;
-public class PruebaExcep{
+
+public class PruebaExcep {
 	public static void main(String[] args) {
 		try {
 			Tablero.insertar(new Maestro("Cristian", 10000f));
@@ -13,7 +14,7 @@ public class PruebaExcep{
 			Tablero.insertar(new Maestro("Federico", 5f));
 			Tablero.insertar(new Alumno("Hanna"));
 			Tablero.insertar(new Alumno("Miriam"));
-		} catch (TableroException e){
+		} catch (TableroException e) {
 			System.out.println(e);
 		}
 		Tablero.mostrar();
@@ -37,15 +38,15 @@ public class PruebaExcep{
                    	Tablero.insertar(u1, rand);
                     Tablero.insertar(u2,rand+1);
                 } catch (TableroException e) {
-                    System.out.println(e + " " + e.getIndex());
-                } else {
-        			try {
-        				Tablero.borrar(rand);
-        			} 	catch (TableroException e){
-        				System.out.println(e + " " + e.getIndex());
-        			}
+                	System.out.println(e + " " + e.getIndex());
+                }
+            } else {
+        		try {
+        			Tablero.borrar(rand);
+        		} catch (TableroException e) {
+        			System.out.println(e + " " + e.getIndex());
         		}
-			}
+        	}
 		}
 		Tablero.mostrar();
 	}
