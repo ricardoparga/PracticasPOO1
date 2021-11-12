@@ -5,9 +5,10 @@ import edu.uaz.ingsoft.appcovid.utils.CmpSem;
 import edu.uaz.ingsoft.appcovid.utils.CmpGrupo;
 import java.util.LinkedList;
 import java.util.TreeSet;
+import java.util.Collections;
 public class PruebaCollect {
 	public static void main(String[] args) {
-		LinkedList <Materia> lista = new LinkedList <Materia> ();
+		LinkedList<Materia> lista = new LinkedList<Materia>();
         lista.add(new Materia("Programacion"));
         lista.add(new Materia("Algoritmos"));
         lista.add(new Materia("S Operativos"));
@@ -16,5 +17,34 @@ public class PruebaCollect {
 
         TreeSet<Materia> tree1 = new TreeSet<Materia>();
         TreeSet<Materia> tree2 = new TreeSet<Materia>(new CmpSem());
+
+        System.out.println("------");
+        for (Materia m : lista) {
+            System.out.println(m);
+            int sem = Tablero.getAleatorio(30);
+            m.setSemestre(sem);
+            char gpo = (char)(Tablero.getAleatorio(40) + 65);
+            m.setGrupo(gpo);
+            tree1.add(m);
+            tree2.add(m);
+        }
+
+        System.out.println("------");
+        for (Materia m : tree1) {
+            System.out.println(m);
+        }
+
+        System.out.println("------");
+        for (Materia m : tree2) {
+            System.out.println(m);
+        }
+
+        System.out.println("------");
+        Collections.sort(lista, new CmpGrupo());
+
+        System.out.println("------");
+        for (Materia m : lista) {
+            System.out.println(m);
+        }
 	}
 }
