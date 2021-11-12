@@ -61,5 +61,8 @@ public class Tablero{
 	public static Universitario[] getPersonas(){
 		return personas;
 	}
+	public static int getAleatorio(int limit) {
+        return (int) (Math.random()*limit);
+    }
 
 }
