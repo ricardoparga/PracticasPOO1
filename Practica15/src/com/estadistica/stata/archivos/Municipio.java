@@ -1,4 +1,4 @@
-package com.estadistica.stata;
+package com.estadistica.stata.archivos;
 public class Municipio{
 	private short id;
 	private String nombre ="";
