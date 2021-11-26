@@ -9,8 +9,8 @@ public class Acciones{
 	}
 
 	public void iniciar(){
-		Elemento e1 = new Elemento(v.getEtiqueta(), 'X');
-		Elemento e2 = new Elemento(v.getEtiqueta(), 'Y');
+		Elemento e1 = new Elemento('X', v.getEtiqueta1());
+		Elemento e2 = new Elemento('Y', v.getEtiqueta2());
 		e1.start();
 		e2.start();
 	}

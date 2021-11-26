@@ -1,9 +1,8 @@
 package mx.edu.uaz.ingsoft.hilos.ventanas;
 import mx.edu.uaz.ingsoft.hilos.elementos.Elemento;
 import javax.swing.*;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import java.awt.BorderLayout;
+import java.awt.*;
+import java.awt.event.*;
 
 public class Ventana extends JFrame{
 	public Acciones acc;
@@ -11,6 +10,8 @@ public class Ventana extends JFrame{
 	private JMenu menu;
 	private JMenuItem miStart;
 	private JMenuItem miExit;
+	JLabel elem1 = new JLabel("Elemento1");
+	JLabel elem2 = new JLabel("Elemento2");
 
 	public Ventana(){
 		acc = new Acciones(this);
@@ -19,27 +20,25 @@ public class Ventana extends JFrame{
 		menu = new JMenu("Archivo");
 		mb.add(menu);
 		setJMenuBar(mb);
-		miStart = new JMenuItem("Iniciando hilo...");
-		miExit = new JMenuItem("Saliendo del hilo...");
+		miStart = new JMenuItem("Iniciar hilo");
+		miExit = new JMenuItem("Salir del hilo");
 		menu.add(miStart);
 
-		miStart.addActionListener(new addActionListener(){
+		miStart.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
 				acc.iniciar();
 			}
 		});
 
+
 		menu.addSeparator();
 		menu.add(miExit);
 
-		miExit.addActionListener(new addActionListener(){
+		miExit.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
 				dispose();
 			}
 		});
-
-		JLabel elem1 = new JLabel("Elemento1");
-		JLabel elem2 = new JLabel("Elemento2");
 
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setJMenuBar(mb);
@@ -55,7 +54,7 @@ public class Ventana extends JFrame{
 	public JLabel getEtiqueta1(){
 		return elem1;
 	}
-	
+
 	public JLabel getEtiqueta2(){
 		return elem2;
 	}
