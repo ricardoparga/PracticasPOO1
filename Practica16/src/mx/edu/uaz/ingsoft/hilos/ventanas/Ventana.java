@@ -45,5 +45,18 @@ public class Ventana extends JFrame{
 		setJMenuBar(mb);
 	}
 
+	public void mostrarVentana(){
+		add(elem1, BorderLayout.NORTH);
+		add(elem2, BorderLayout.SOUTH);
+		setSize(800,200);
+		setVisible(true);
+	}
+
+	public JLabel getEtiqueta1(){
+		return elem1;
+	}
 	
+	public JLabel getEtiqueta2(){
+		return elem2;
+	}
 }
