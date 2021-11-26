@@ -26,8 +26,44 @@ public class Acciones{
 			}finally{
 				br.close();
 			}
-		}catch (IOException io){
-			io.printStackTrace();
+		} catch (IOException ioe){
+			ioe.printStackTrace();
+		}
+	}
+
+	public static ArrayList<Municipio> getMunicipios(){
+		if (municipios != null){
+			return municipios;
+		}
+		return new ArrayList<Municipio>();
+	}
+
+	public static char getCharAleat(){
+		return Character.toUpperCase((char)(Math.random()*40 + 65));
+	}
+
+	public static void guardarDatos(String s, char c){
+		int totalPob = 0;
+		if (municipios == null){
+			return;
+		}
+		try{
+			FileWriter FileWriter = new FileWriter(s);
+			BufferedWriter bw = new BufferedWriter(fw);
+			try{
+				for (Municipio m : municipios) {
+					if (m.getNombre().charAt(0) == c) {
+						bw.write(m.toString());
+						totalPob = totalPob + m.getPoblacion();
+					}
+				}
+				bw.write("La poblacion total es: " + totalPob);
+
+			} finally{
+				bw.close();
+			}
+		} catch (IOException ioe){
+			ioe.printStackTrace();
 		}
 	}
 }
