@@ -1,4 +1,6 @@
 package com.estadistica.stata.archivos;
+import java.io.*;
+import java.util.*;
 
 public class Acciones{
 	private static ArrayList<Municipio> municipios;
@@ -49,7 +51,7 @@ public class Acciones{
 			return;
 		}
 		try{
-			FileWriter FileWriter = new FileWriter(s);
+			FileWriter fw = new FileWriter(s);
 			BufferedWriter bw = new BufferedWriter(fw);
 			try{
 				for (Municipio m : municipios) {

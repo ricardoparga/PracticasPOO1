@@ -16,24 +16,25 @@ public class PruebaIO{
 		String path = home+System.getProperty("file.separator");
 
 		String[] contenido = home.list();
-
+		
+		System.out.println("Escibe el nombre del archivo: ");
 		for (String v : contenido){
 			File f = new File(path+v);
 			if (f.isFile() && v.equals("datos.info")) {
-				procesar(path+v);
+				Acciones.procesar(path+v);
 			}
 
 		}
 
-		ArrayList<Municipio> municipios = getMunicipios();
-		System.out.println(municipios);
+		ArrayList<Municipio> municipios = Acciones.getMunicipios();
+		//System.out.println(municipios);
 
 		Scanner s = new Scanner(System.in);
 
 		String archivoOut = path+s.nextLine();
 
-		char c = getCharAleat();
+		char c = Acciones.getCharAleat();
 		System.out.println("Los municipios que inician en "+c+" Se guardan en "+archivoOut);
-		guardarDatos(archivoOut, c);
+		Acciones.guardarDatos(archivoOut, c);
 	}
 }

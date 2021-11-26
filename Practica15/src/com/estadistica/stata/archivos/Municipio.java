@@ -1,4 +1,6 @@
 package com.estadistica.stata.archivos;
+import java.io.*;
+import java.util.*;
 
 public class Municipio{
 	private short id;
@@ -21,6 +23,6 @@ public class Municipio{
 		return poblacion;
 	}
 	public String toString(){
-		return "{"+ id +" \t "+ poblacion +"}"
+		return "{"+ id + "\t"+ nombre + "\t" + poblacion +"}";
 	}
 }
